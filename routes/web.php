@@ -31,3 +31,6 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 //个人中心
 Route::resource('users','usersController',['only'=>['show','update','edit']]);
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+//话题分类列表
+Route::resource('categories','CategoriesController',['only'=>['show']]);
